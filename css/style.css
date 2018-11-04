@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* CSS Variables */
+:root {
+    --primary-color: #b90415;
+    --primary-color-hover: #d3071b;
+    --secondary-color: #103063;
+    --secondary-color-hover: #143f85;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #252529;
+    margin: 0;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* Section */
+.section {
+    padding: 2rem 0;
+}
+
+.section .section-head {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.section h3 {
+    font-size: 2rem;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+/* Buttons */
+.btn {
+    padding: .5rem 1rem;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-light {
+    color: var(--light-color);
+}
+
+/* Backgrounds Colors */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-seondary {
+    background-color: var(--seondary-color);
+}
+
+.bg-light {
+    background-color: var(--light-color);
+    color: #333;
+}
+
+/* Showcase */
+#showcase {
+    margin: 0;
+    padding: 0;
+    background: url('../img/showcase.jpg') no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#showcase .section-main {
+    margin-top: 25vh;
+}
+
+#showcase .section-main h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+#showcase .section-main h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+
+
+/* Navbar */
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    position: fixed;
+    z-index: 9999;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #444;
+}
+
+nav a#openup {
+    display: none;
+}
+
+/* Entertainment */
+#entertainment {
+    background: url('../img/section-bg.jpg') no-repeat bottom/cover;
+    padding: 10rem 0;
+}
+
+/* Gift Cards */
+.gift-cards {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+}
+
+/* Footer */
+.footer-cols {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: left;
+    padding: 2rem;
+}
+
+.footer-cols ul li {
+    list-style: none;
+    line-height: 1.6;
+}
+
+.footer-cols ul li:first-of-type {
+    border-bottom: 1px dotted #444;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+    .hide-on-small {
+        display: none;
+    }
+
+    .secton-head {
+        font-size: 1.2rem;
+    }
+
+    #showcase {
+        height: 50vh;
+    }
+
+    #showcase .section-main {
+        margin-top: 15vh;
+    }
+
+    #showcase .section-main h1 {
+        font-size: 3rem;
+    }
+
+    #showcase .section-main h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        height: auto;
+        border-bottom: 0;
+    }
+
+    nav ul {
+        display: none;
+        height: auto;
+    }
+
+    nav li {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        background: #333;
+        border-bottom: 1px solid #555;
+    }
+
+    nav a:hover {
+        background: #444;
+    }
+
+    nav a#openup:after {
+        content: "|||";
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+
+    nav a#openup {
+        display: block;
+        background-color: #333;
+        width: 100%;
+        position: relative;
+    }
+
+    .gift-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
